@@ -1,0 +1,40 @@
+# functie uitschakelen met '#'
+# dubbele spatie voor de criteria behouden
+
+  
+
+- name: Tds-Cleaning
+  description: Tds-Cleaning
+  # folder: pages/logo/
+  permalink: /tdscleaning
+  # fa-icon: icon-graduation-cap
+
+- name: BS-Totaalprojecten
+  description: Bs-Totaalprojecten
+  # folder: pages/kleur/
+  permalink: /bstotaalprojecten
+  # fa-icon: icon-info
+
+- name: Uitnodigingen
+  description: Uitnodigingen
+  # folder: pages/stijlgids
+  permalink: /uitnodigingen
+  # fa-icon: icon-info
+  
+- name: Graphic Design
+  description: Graphic Design
+  # folder: pages/stijlgids
+  permalink: /graphicdesign
+  # fa-icon: icon-info
+  
+- name: Bachelorproef
+  description: Bachelorproef
+  # folder: pages/stijlgids
+  permalink: /andromedabap
+  # fa-icon: icon-info
+  
+- name: Stage
+  description: Stage
+  # folder: pages/stijlgids
+  permalink: /stage
+  # fa-icon: icon-info

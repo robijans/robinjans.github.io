@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+   <div >
+        <a class="navbar-brand" href="{{ site.baseurl }}/index.html">
+            <img src="{{ site.baseurl }}/images/logo_puntkomma.png" class="img-fluid" alt="responsive-image">
+        
+        </a>
+       </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="{{ site.baseurl }}/images/toggler_icon.png" class="toggler_icon" alt="toggler-icon">
+                    </button>
+
+        <div class="collapse navbar-collapse" id="mainNavigation">
+                
+            
+        <ul class="navbar-nav mr-auto justify-content-end">
+        {%- for nav-item in site.data.navigation %}
+        
+            {%- capture item_classes %}{% if page.url contains nav-item.permalink %}active{% endif %}{% endcapture %}
+            {%- if nav-item.folder %}
+                <li class="nav-item dropdown {{ item_classes }}">
+                        <a class="nav-link dropdown-toggle" href="{{ nav-item.permalink | relative_url }}" id="navbarDropdown" title="{{ nav-item.name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ nav-item.name }}
+                        </a>
+                        {%- include navigation-from-folder.html nav-item=nav-item %}
+                </li>
+            {%- else %}
+            <li class="nav-item {{ item_classes }}">
+                    <a class="nav-link" href="{{ nav-item.permalink | relative_url }}" title="{{ nav-item.name }}">
+                        {{ nav-item.name }}
+                    </a>
+            </li>
+            {%- endif %}
+
+        {%- endfor %}
+        </ul>
+
+        </div>
+   
+</nav>
